@@ -1,21 +1,79 @@
-# Desafio sistema de gerenciamento de tarefas (To-Do List)
-Repositório para ser usado pelos candidatos à vaga de Desenvolvedor Fullstack Liferay da Simplify
+# Big Game Survey 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/neliocursos/exemplo-readme/blob/main/LICENSE) 
 
-## Descrição
-- Desenvolva uma aplicação web utilizando uma linguagem de programação e um framework de sua escolha. A aplicação deve consistir em um sistema de gerenciamento de tarefas, onde os usuários podem criar, visualizar, editar e excluir tarefas.
+# Sobre o projeto
 
-## Requisitos
-- Usar banco de dados relacional
-- Campos mínimos da entidade de tarefa
-    - Nome
-    - Descrição
-    - Realizado
-    - Prioridade
-    - Data de criação
-- Criar CRUD de tarefas
+COLOCAR LINK VERCEL E LINK DO BACKEND NO GOOGLE CLOUD
 
-## Instruções
-- Fazer um fork do repositório para sua conta pessoal do git
-- Trabalhar utilizando commits
-- Documentar como executar sua aplicação
-- Descrever as funcionalidades do software
+Projeto de desafio desenvolvido para processo seletivo da Simplify.
+
+A aplicação consiste em um To-Do-List (Lista de tarefas), onde o usuário pode criar, listar, alterar e deletar tarefas. As tarefas criadas são persistidas no banco de dados MySQL, em uma tabela chamada tasks.
+
+O usuário também pode definir níveis de prioridade, como: baixa, normal e alta. As tarefas são listadas de acordo com o nível de prioridade.
+
+
+## Layout mobile
+![Mobile]()
+
+## Layout web
+![Web]()
+
+## Modelo conceitual
+![Modelo Conceitual]()
+
+# Tecnologias utilizadas
+## Back end
+- NodeJS
+- Express
+- Sequelize
+- Body Parser
+- Cors
+- MySQL2
+## Front end
+- NextJS / TypeScript
+- TailwindCSS
+## Implantação em produção
+- Back end: Google Cloud / Linux
+- Front end web: Vercel
+- Banco de dados: MySQL
+
+# Como executar o projeto
+
+## Back end
+Pré-requisitos: Node -v 18.18.0
+
+```bash
+# clonar repositório
+git clone LINK
+
+# entrar na pasta do projeto backend
+cd backend
+
+# instalar dependências
+npm install
+// ou
+yarn install
+
+# executar o projeto
+npm start
+```
+
+## Front end web
+Pré-requisitos: npm / yarn
+
+```bash
+# clonar repositório
+git clone LINK
+
+# instalar dependências
+npm install
+// ou
+yarn install
+
+# executar o projeto
+npm run dev
+```
+
+# Autor
+
+Walisson Gomes da Silva
