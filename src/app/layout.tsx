@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <Header />
         {/* <NavBar /> */}
-        <main className='h-full flex items-center justify-center bg-white'>
+        <main className='h-full items-center justify-center bg-white'>
           <Toaster
             position="top-right"
             reverseOrder={false}
