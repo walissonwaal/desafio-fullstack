@@ -16,7 +16,7 @@ app.use(cors());
 app.use('/api/tasks', taskRoute);
 
 sequelize
-  .sync()
+  .sync({force: false})
   .then(() => {
     console.log('Models sincronizados');
     app.listen(PORT, () => {

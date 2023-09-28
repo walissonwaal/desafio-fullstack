@@ -11,7 +11,8 @@ const Task = sequelize.define('Task', {
     allowNull: true,
   },
   finished: {
-    type: DataTypes.BOOLEAN,
+    type: DataTypes.STRING,
+    defaultValue: 'Pendente',
     allowNull: false,
   },
   priority: {

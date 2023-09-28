@@ -1,25 +1,12 @@
-# Big Game Survey 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/neliocursos/exemplo-readme/blob/main/LICENSE) 
+# Desafio Fullstack
 
 # Sobre o projeto
-
-COLOCAR LINK VERCEL E LINK DO BACKEND NO GOOGLE CLOUD
 
 Projeto de desafio desenvolvido para processo seletivo da Simplify.
 
 A aplicação consiste em um To-Do-List (Lista de tarefas), onde o usuário pode criar, listar, alterar e deletar tarefas. As tarefas criadas são persistidas no banco de dados MySQL, em uma tabela chamada tasks.
 
 O usuário também pode definir níveis de prioridade, como: baixa, normal e alta. As tarefas são listadas de acordo com o nível de prioridade.
-
-
-## Layout mobile
-![Mobile]()
-
-## Layout web
-![Web]()
-
-## Modelo conceitual
-![Modelo Conceitual]()
 
 # Tecnologias utilizadas
 ## Back end
