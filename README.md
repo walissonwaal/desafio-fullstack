@@ -1,7 +1,5 @@
 # Desafio Fullstack
 
-#### Frontend: https://desafio-fullstack-i3wc7vh2p-walissonwaal.vercel.app/
-
 # Sobre o projeto
 
 Projeto de desafio desenvolvido para processo seletivo da Simplify.
@@ -21,10 +19,8 @@ O usuário também pode definir níveis de prioridade, como: baixa, normal e alt
 ## Front end
 - NextJS / TypeScript
 - TailwindCSS
-## Implantação em produção
-- Back end: Google Cloud / Linux
-- Front end web: Vercel
-- Banco de dados: MySQL
+## Banco de dados
+- MySQL
 
 # Como executar o projeto
 
