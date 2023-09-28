@@ -31,7 +31,7 @@ Pré-requisitos: Node -v 18.18.0
 
 ```bash
 # clonar repositório
-git clone LINK
+git clone [LINK](https://github.com/walissonwaal/desafio-fullstack.git)
 
 # entrar na pasta do projeto backend
 cd backend
@@ -50,7 +50,7 @@ Pré-requisitos: npm / yarn
 
 ```bash
 # clonar repositório
-git clone LINK
+git clone [LINK](https://github.com/walissonwaal/desafio-fullstack.git)
 
 # instalar dependências
 npm install
