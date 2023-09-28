@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full flex flex-col gap-10 justify-center items-center">
+      <div className="w-full h-full flex flex-col gap-10 justify-center items-center">
         <div className="flex flex-col items-center">
           <h2 className="text-2xl md:text-5xl font-bold text-base-200">Bem vindo ao To-Do-List</h2>
           <p className="text-center text-xl md:text-2xl font-light text-base-200">Controle suas tarefas de forma simples e direta</p>
