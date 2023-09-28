@@ -19,10 +19,8 @@ O usuário também pode definir níveis de prioridade, como: baixa, normal e alt
 ## Front end
 - NextJS / TypeScript
 - TailwindCSS
-## Implantação em produção
-- Back end: Google Cloud / Linux
-- Front end web: Vercel
-- Banco de dados: MySQL
+## Banco de dados
+- MySQL
 
 # Como executar o projeto
 
@@ -31,7 +29,7 @@ Pré-requisitos: Node -v 18.18.0
 
 ```bash
 # clonar repositório
-git clone LINK
+git clone [LINK](https://github.com/walissonwaal/desafio-fullstack.git)
 
 # entrar na pasta do projeto backend
 cd backend
@@ -50,7 +48,7 @@ Pré-requisitos: npm / yarn
 
 ```bash
 # clonar repositório
-git clone LINK
+git clone [LINK](https://github.com/walissonwaal/desafio-fullstack.git)
 
 # instalar dependências
 npm install
