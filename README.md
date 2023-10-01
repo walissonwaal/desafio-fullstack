@@ -61,6 +61,15 @@ yarn install
 npm run dev
 ```
 
+## Banco de dados
+Pré-requisitos: MySQL
+
+```bash
+# criar banco de dados todo_db
+CREATE DATABASE todo_db;
+
+```
+
 # Autor
 
 Walisson Gomes da Silva

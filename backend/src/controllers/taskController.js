@@ -46,7 +46,7 @@ exports.updateTask = async (req, res) => {
   }
 };
 
-// Operação: Excluir um usuário pelo ID
+// Deletar task
 exports.deleteTask = async (req, res) => {
   try {
     const { id } = req.params;
