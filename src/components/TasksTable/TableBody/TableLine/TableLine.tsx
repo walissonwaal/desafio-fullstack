@@ -1,7 +1,7 @@
-"use client";
-import { deleteTask } from "@/api/task";
-import { useState } from "react";
-import toast from "react-hot-toast";
+'use client';
+import { deleteTask } from '@/api/task';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 interface TableLineProps {
   id: number;
@@ -15,35 +15,35 @@ interface TableLineProps {
 const TableLine = (props: TableLineProps) => {
   const [isUpdate, setIsUpdate] = useState<boolean>(false);
 
-  const [name, setName] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  const [name, setName] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
   const [finished, setFinished] = useState<string>('Pendente');
-  const [priority, setPriority] = useState<string>("Baixa");
+  const [priority, setPriority] = useState<string>('Baixa');
 
   const success = () => toast.success('Tafera alterada com sucesso!');
   const error = () => toast.error('Altere ao menos um campo.');
 
   // formata data
-  function converterDataParaFormatoBR(dateString: any) {
+  function dateConversion(dateString: any) {
     const date = new Date(dateString);
-  
+
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
-  
+
     return `${day}/${month}/${year}`;
   }
 
-  const dateFormated = converterDataParaFormatoBR(props.createdAt);
+  const dateFormated = dateConversion(props.createdAt);
 
   const dataUpdated = {
     name: name || props.name,
     description: description || props.description,
     finished: finished || props.finished,
-    priority: priority || props.priority
-  }
+    priority: priority || props.priority,
+  };
 
-  const baseURL = 'http://localhost:3001/api'
+  const baseURL = 'http://localhost:3001/api';
 
   const updateTask = async (taskId: number, dataUpdated: any) => {
     try {
@@ -56,9 +56,9 @@ const TableLine = (props: TableLineProps) => {
       });
 
       if (response.ok) {
-        success()
-        setIsUpdate(!isUpdate)
-        console.log('Tarefa alterada com sucesso!')
+        success();
+        setIsUpdate(!isUpdate);
+        console.log('Tarefa alterada com sucesso!');
       } else {
         const responseData = await response.json();
         console.error('Erro ao atualizar tarefa:', responseData);
@@ -88,7 +88,7 @@ const TableLine = (props: TableLineProps) => {
         </td>
       )}
       {!isUpdate ? (
-        <td className="py-4 px-6 text-sm font-medium text-gray-500">
+        <td className="py-4 px-6 text-sm font-medium text-gray-500 whitespace-pre-line">
           {props.description}
         </td>
       ) : (
@@ -106,7 +106,7 @@ const TableLine = (props: TableLineProps) => {
           {props.finished}
         </td>
       ) : (
-        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center w-[353.91px]">
+        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center">
           <select
             className="border bg-white border-zinc-300 rounded-md px-2 py-2"
             value={finished}
@@ -132,7 +132,7 @@ const TableLine = (props: TableLineProps) => {
             onChange={(e) => setPriority(e.target.value)}
           >
             <option value="Baixa" disabled selected>
-              Baixa
+              {props.priority}
             </option>
             <option value="Alta">Alta</option>
             <option value="Normal">Normal</option>

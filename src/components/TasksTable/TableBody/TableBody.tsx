@@ -1,7 +1,7 @@
-"use client"
-import { getTasks } from "@/api/task";
-import { TableLine } from "@/components";
-import { useEffect, useState } from "react";
+'use client';
+import { getTasks } from '@/api/task';
+import { TableLine } from '@/components';
+import { useEffect, useState } from 'react';
 
 interface Task {
   id: number;
@@ -12,10 +12,10 @@ interface Task {
   createdAt: Date;
 }
 
-const ordenarPorPrioridade = (tarefas: Task[]) => {
-  return tarefas.sort((a, b) => {
-    const prioridades = ["Alta", "Normal", "Baixa"];
-    return prioridades.indexOf(a.priority) - prioridades.indexOf(b.priority);
+const orderByPriority = (tasks: Task[]) => {
+  return tasks.sort((a, b) => {
+    const priorities = ['Alta', 'Normal', 'Baixa'];
+    return priorities.indexOf(a.priority) - priorities.indexOf(b.priority);
   });
 };
 
@@ -26,10 +26,10 @@ const TableBody = () => {
     async function fetchTasks() {
       try {
         const tasksData = await getTasks();
-        const tasksOrdenadas = ordenarPorPrioridade(tasksData);
+        const tasksOrdenadas = orderByPriority(tasksData);
         setTasks(tasksOrdenadas);
       } catch (error) {
-        console.error("Erro ao buscar tarefas:", error);
+        console.error('Erro ao buscar tarefas:', error);
       }
     }
 
