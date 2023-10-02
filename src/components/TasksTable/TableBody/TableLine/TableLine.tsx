@@ -43,7 +43,7 @@ const TableLine = (props: TableLineProps) => {
     priority: priority || props.priority,
   };
 
-  const baseURL = 'http://34.95.189.130/api';
+  const baseURL = 'https://fitlucros.walissongomes.com/api';
 
   const updateTask = async (taskId: number, dataUpdated: any) => {
     try {
