@@ -1,6 +1,6 @@
 # Desafio Fullstack
 
-#### Frontend: https://desafio-fullstack-kr39z86kb-walissonwaal.vercel.app/
+#### Em produção: https://desafio-fullstack-kr39z86kb-walissonwaal.vercel.app/
 
 # Sobre o projeto
 
@@ -23,6 +23,9 @@ O usuário também pode definir níveis de prioridade, como: baixa, normal e alt
 - TailwindCSS
 ## Banco de dados
 - MySQL
+## Deploy
+- Google Cloud
+- Vercel
 
 # Como executar o projeto
 
