@@ -43,7 +43,7 @@ const TableLine = (props: TableLineProps) => {
     priority: priority || props.priority,
   };
 
-  const baseURL = 'http://localhost:3001/api';
+  const baseURL = 'http://34.95.189.130/api';
 
   const updateTask = async (taskId: number, dataUpdated: any) => {
     try {

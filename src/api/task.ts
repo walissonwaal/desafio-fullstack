@@ -1,4 +1,4 @@
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 
 interface Task {
   name: string;
@@ -7,7 +7,7 @@ interface Task {
   priority: string;
 }
 
-const baseURL = 'http://localhost:3001/api'
+const baseURL = 'http://34.95.189.130/api';
 
 const success = () => toast.success('Tafera excluída com sucesso!');
 
@@ -37,7 +37,7 @@ export const createTask = async (newTaskData: Task) => {
     if (!response.ok) {
       throw new Error('Não foi possível criar uma nova tarefa');
     } else {
-      console.log('Tarefa criada com sucesso!')
+      console.log('Tarefa criada com sucesso!');
     }
 
     const createdTask: Task = await response.json();
@@ -49,26 +49,23 @@ export const createTask = async (newTaskData: Task) => {
 
 export const deleteTask = async (taskId: number) => {
   try {
-    const response = await fetch(
-      `${baseURL}/tasks/${taskId}}`,
-      {
-        method: "DELETE",
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    const response = await fetch(`${baseURL}/tasks/${taskId}}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
     if (response.ok) {
-      success()
-      console.log('Tarefa deletada com sucesso.')
+      success();
+      console.log('Tarefa deletada com sucesso.');
     } else {
       const responseData = await response.json();
-      console.error("Erro ao excluir tarefa", responseData);
+      console.error('Erro ao excluir tarefa', responseData);
       alert(`Erro ao excluir tarefa ${responseData.error}`);
     }
   } catch (error) {
-    console.error("Erro ao excluir Tarefa", error);
-    alert("Erro ao excluir tarefa. Verifique o console para detalhes.");
+    console.error('Erro ao excluir Tarefa', error);
+    alert('Erro ao excluir tarefa. Verifique o console para detalhes.');
   }
 };
