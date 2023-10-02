@@ -41,6 +41,8 @@ npm install
 // ou
 yarn install
 
+# definir variáveis de ambiente conforme exemplo (.env.exemple)
+
 # executar o projeto
 npm start
 ```
