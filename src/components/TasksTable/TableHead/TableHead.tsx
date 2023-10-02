@@ -28,13 +28,13 @@ const TableHead = () => {
         </th>
         <th
           scope="col"
-          className="py-3 px-6 text-xs font-medium tracking-wider text-left text-white uppercase"
+          className="py-3 px-6 text-xs font-medium tracking-wider text-center text-white uppercase"
         >
           Data de criação
         </th>
         <th
           scope="col"
-          className="py-3 px-6 text-xs font-medium tracking-wider text-left text-white uppercase"
+          className="py-3 px-6 text-xs font-medium tracking-wider text-center text-white uppercase"
         >
           Ações
         </th>

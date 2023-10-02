@@ -73,7 +73,7 @@ const TableLine = (props: TableLineProps) => {
   return (
     <tr key={props.id} className="hover:bg-white">
       {!isUpdate ? (
-        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap w-60">
+        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap w-60 capitalize">
           {props.name}
         </td>
       ) : (
@@ -88,7 +88,7 @@ const TableLine = (props: TableLineProps) => {
         </td>
       )}
       {!isUpdate ? (
-        <td className="py-4 px-6 text-sm font-medium text-gray-500 whitespace-pre-line">
+        <td className="py-4 px-6 text-sm font-medium text-gray-500 whitespace-pre-line capitalize">
           {props.description}
         </td>
       ) : (
@@ -102,7 +102,7 @@ const TableLine = (props: TableLineProps) => {
         </td>
       )}
       {!isUpdate ? (
-        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center">
+        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-start">
           {props.finished}
         </td>
       ) : (
@@ -121,11 +121,11 @@ const TableLine = (props: TableLineProps) => {
         </td>
       )}
       {!isUpdate ? (
-        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center">
+        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-start">
           {props.priority}
         </td>
       ) : (
-        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center w-[371.8px]">
+        <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-start w-[371.8px]">
           <select
             className="border bg-white border-zinc-300 rounded-md px-2 py-2"
             value={priority}

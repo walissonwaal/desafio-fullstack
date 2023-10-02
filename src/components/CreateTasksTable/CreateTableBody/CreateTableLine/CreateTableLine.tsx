@@ -1,22 +1,22 @@
-"use client";
-import { createTask } from "@/api/task"
-import { useState } from "react"
-import { BiPlusCircle } from "react-icons/bi"
-import { format } from 'date-fns'
+'use client';
+import { createTask } from '@/api/task';
+import { useState } from 'react';
+import { BiPlusCircle } from 'react-icons/bi';
+import { format } from 'date-fns';
 import toast from 'react-hot-toast';
 
 const CreateTableLine = () => {
-  const [name, setName] = useState<string>("")
-  const [description, setDescription] = useState<string>("")
-  const [finished, setFinished] = useState<string>('Pendente')
-  const [priority, setPriority] = useState<string>('Baixa')
+  const [name, setName] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
+  const [finished, setFinished] = useState<string>('Pendente');
+  const [priority, setPriority] = useState<string>('Baixa');
 
   const success = () => toast.success('Tafera criada com sucesso!');
   const error = () => toast.error('Preencha os campos!');
 
-const currentDate = new Date();
+  const currentDate = new Date();
 
-const currentDateBRL = format(currentDate, 'dd/MM/yyyy');
+  const currentDateBRL = format(currentDate, 'dd/MM/yyyy');
 
   const handleCreateNewTask = async () => {
     try {
@@ -24,22 +24,21 @@ const currentDateBRL = format(currentDate, 'dd/MM/yyyy');
         name,
         description,
         finished,
-        priority
+        priority,
       };
 
-      if(name === '' && description === ''){
-        error()
-        return 
+      if (name === '' && description === '') {
+        error();
+        return;
       }
 
       const createdTask = await createTask(newTaskData);
 
-      setName("");
-      setDescription("");
+      setName('');
+      setDescription('');
       setFinished('Pendente');
-      setPriority("Baixa");
-      success()
-      
+      setPriority('Baixa');
+      success();
     } catch (error) {
       console.error('Erro ao criar a tarefa:', error);
     }
@@ -64,7 +63,7 @@ const currentDateBRL = format(currentDate, 'dd/MM/yyyy');
           onChange={(e) => setDescription(e.target.value)}
         />
       </td>
-      <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center w-[353.91px]">
+      <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-start w-[353.91px]">
         <select
           className="border bg-white border-zinc-300 rounded-md px-2 py-2"
           value={finished}
@@ -77,21 +76,21 @@ const currentDateBRL = format(currentDate, 'dd/MM/yyyy');
           <option value="Concluído">Concluído</option>
         </select>
       </td>
-      <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center w-[371.8px]">
+      <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-start w-[371.8px]">
         <select
           className="border bg-white border-zinc-300 rounded-md px-2 py-2"
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         >
-          <option value='Baixa' disabled selected>
+          <option value="Baixa" disabled selected>
             Baixa
           </option>
-          <option value='Alta'>Alta</option>
-          <option value='Normal'>Normal</option>
-          <option value='Baixa'>Baixa</option>
+          <option value="Alta">Alta</option>
+          <option value="Normal">Normal</option>
+          <option value="Baixa">Baixa</option>
         </select>
       </td>
-      <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center w-[479.16px]">
+      <td className="py-4 px-6 text-sm font-medium text-black whitespace-nowrap text-center">
         {currentDateBRL}
       </td>
       <td className="py-4 px-6 text-sm font-medium text-right whitespace-nowrap w-[103.93px]">
